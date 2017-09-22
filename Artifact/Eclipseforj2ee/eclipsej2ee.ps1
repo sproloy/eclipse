@@ -44,7 +44,7 @@ Param(
     # comma or semicolon separated list of chocolatey packages.
     [ValidateNotNullOrEmpty()]
     [string]
-    $RawPackagesList='eclipse-standard-kepler'
+    $RawPackagesList='eclipse'
 )
 
 ##################################################################################################
