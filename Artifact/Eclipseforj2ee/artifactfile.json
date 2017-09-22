@@ -1,10 +1,10 @@
 {
   "$schema": "https://raw.githubusercontent.com/Azure/azure-devtestlab/master/schemas/2016-11-28/dtlArtifacts.json",
-  "title": "Eclipse",
-  "description": "Installs eclipse",
+  "title": "SQLlite",
+  "description": "Installs Sqllite",
   "tags": [
     "Windows",
-    "Eclipse"
+    "Sqlite"
      ],
   "targetOsType": "Windows",
   "runCommand": {
