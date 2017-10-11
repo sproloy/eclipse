@@ -25,8 +25,8 @@ function WaitForFile($File) {
 
 #$DesktopPath = [System.Environment]::GetFolderPath([System.Environment+SpecialFolder]::Desktop)
 
-
-$setupFolder= "$($env:USERPROFILE)\Desktop\guide.txt"
+#$setupFolder = "$env:Public\Desktop\guide"
+$setupFolder= "$($env:Public)\Desktop\guide.txt"
 Create-Folder "$setupFolder"
 
 
