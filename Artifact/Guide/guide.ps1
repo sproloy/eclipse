@@ -26,7 +26,7 @@ function WaitForFile($File) {
 #$DesktopPath = [System.Environment]::GetFolderPath([System.Environment+SpecialFolder]::Desktop)
 
 #$setupFolder = "$env:Public\Desktop\guide"
-$setupFolder= "$($env:Public)\Desktop\guide.txt"
+$setupFolder= "$($env:Public)\Desktop\Important Information"
 Create-Folder "$setupFolder"
 
 
@@ -35,10 +35,10 @@ Create-Folder "$setupFolder"
 
 
 # haxm 
-if((Test-Path "$setupFolder\guide.txt") -eq $false)
+if((Test-Path "$setupFolder\Important Information.txt") -eq $false)
 {
   
-        Download-File "https://atestdeccan6192.blob.core.windows.net/guide/guide.txt" "$setupFolder\guide.txt"
+        Download-File "https://atestdeccan6192.blob.core.windows.net/guide/guide.txt" "$setupFolder\Important Information.txt"
 }
 
 
