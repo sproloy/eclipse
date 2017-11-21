@@ -43,5 +43,5 @@ if((Test-Path "$setupFolder\postgresql-10.1-2-windows-x64.exe") -eq $false)
 
 #C:\Users\prodevtest\Downloads\postgresql-10.1-2-windows-x64.exe  --help
 
-C:\postgresql-10.1-2-windows-x64.exe --unattendedmodeui minimal --mode unattended --superpassword "password" --servicename "postgreSQL" --servicepassword "password" --serverport 5432
-Remove-Item –path C:\postgrespro -Recurse
+C:\postgrespro\postgresql-10.1-2-windows-x64.exe --unattendedmodeui minimal --mode unattended --superpassword "password" --servicename "postgreSQL" --servicepassword "password" --serverport 5432
+#Remove-Item –path C:\postgrespro -Recurse
