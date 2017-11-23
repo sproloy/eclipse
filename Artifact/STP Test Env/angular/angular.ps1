@@ -1,3 +1,3 @@
-﻿cd "C:\Windows\system32"
+﻿$env:Path += ";C:\Program Files\nodejs\"
 npm install -g @angular/cli
 pwd
