@@ -1,8 +1,5 @@
-﻿#$env:Path += ";C:\Windows\system32\"
+﻿$env:Path += ";C:\Program Files\nodejs"
 
-$DesktopPath = [Environment]::GetFolderPath("Desktop")  
-
-
-cd $DesktopPath
 npm install -g @angular/cli
+$env:Path += ";C:\Windows\system32\config\systemprofile\AppData\Roaming\npm"
 pwd
