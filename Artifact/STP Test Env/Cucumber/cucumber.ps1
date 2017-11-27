@@ -23,6 +23,8 @@ Invoke-WebRequest $source -OutFile $destination
 Start-Process -FilePath "C:\installer\rubyinstaller-2.4.2-2-x64.exe" -ArgumentList "/silent /tasks='assocfiles,modpath'" -PassThru -Wait  
 # Wait XX Seconds for the installation to finish
 Start-Sleep -s 35
+
+cd "C:\Ruby24-x64\bin"
 #install cucumber version 2.3.3
 gem install cucumber -v 2.3.3
 cucumber --version
