@@ -1,7 +1,7 @@
 ﻿Param(
     [ValidateNotNullOrEmpty()]
     [string]
-    $RawPackagesList="ruby --version 2.3.3"
+    $RawPackagesList="ruby"
 )
   
 $ErrorActionPreference = "Stop"
