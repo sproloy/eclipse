@@ -122,7 +122,7 @@ Add-Type -assembly "system.io.compression.filesystem"
 
 [io.compression.zipfile]::ExtractToDirectory($BackUpPath, $destination)
 
-Remove-Item –path "C:\Ansicon\ansi160.zip" -Recurse
+Remove-Item –path C:\Ansicon\ansi160.zip -Recurse
 
 cd C:\Ansicon\x64
 ansicon.exe -i
