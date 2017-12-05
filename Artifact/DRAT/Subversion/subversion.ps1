@@ -80,10 +80,19 @@ Get-ChildItem $Destination | ForEach-Object {Copy-Item -Path $Source -Destinatio
 
 Create-Folder "C:\Users\*\AppData\Roaming\Subversion"
 
-$Source = "C:\Program Files\Subversion\"
+#$Source = "C:\Program Files\Subversion\"
 #Get-ChildItem $source
-$Destination = 'C:\Users\*\AppData\Roaming'
-Get-ChildItem $Destination | ForEach-Object {Copy-Item -Path $Source -Destination $Destination -Force -Recurse}   
+#$Destination = 'C:\Users\*\AppData\Roaming'
+#Get-ChildItem $Destination | ForEach-Object {Copy-Item -Path $Source -Destination $Destination -Force -Recurse} 
+
+
+ForEach ($user in (Get-ChildItem "C:\Users" -Exclude Public)) {
+    $Source = "C:\Program Files\Subversion\"
+
+    Copy-Item -Path "MyFile.txt" -Destination "C:\Users\$user\AppData\Roaming" -Force -Recurse
+}
+    
+    
 
 
 
