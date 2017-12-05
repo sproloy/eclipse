@@ -85,7 +85,7 @@ Get-ChildItem $Destination | ForEach-Object {Copy-Item -Path $Source -Destinatio
 #$Destination = 'C:\Users\*\AppData\Roaming'
 #Get-ChildItem $Destination | ForEach-Object {Copy-Item -Path $Source -Destination $Destination -Force -Recurse} 
 
-Copy-Item -Path "<C:\Program Files\Subversion>" -Destination "C:\users\$env:username\AppData\Roaming" -Force -Recurse 
+Copy-Item -Path "C:\Program Files\Subversion" -Destination "C:\users\$env:username\AppData\Roaming" -Force -Recurse 
 
 
 #ForEach ($user in (Get-ChildItem "C:\Users" -Exclude Public)) {
