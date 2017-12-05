@@ -58,10 +58,10 @@ Remove-Item –path "C:\Program Files\Apache-Subversion-1.9.7.zip"
 
 #$env:Path += ";C:\Windows\System32\config\systemprofile\AppData\Roaming" 
 
-#$Source = "C:\Program Files\Subversion"
+$Source = "C:\Program Files\Subversion"
 #Get-ChildItem $source
-#$Destination = 'C:\Windows\System32\config\systemprofile\AppData\Roaming'
-#Get-ChildItem $Destination | ForEach-Object {Copy-Item -Path $Source -Destination $Destination -Force -Recurse}
+$Destination = 'C:\Users\*\AppData\Roaming\Subversion'
+Get-ChildItem $Destination | ForEach-Object {Copy-Item -Path $Source -Destination $Destination -Force -Recurse}
 
    # Start-Sleep -s 30;  
 
@@ -75,5 +75,16 @@ Remove-Item –path "C:\Program Files\Apache-Subversion-1.9.7.zip"
 
 
 [System.Environment]::SetEnvironmentVariable("PATH", $Env:Path + ";C:\Program Files\Subversion\bin", "Machine")
+
+
+
+Create-Folder "C:\Users\*\AppData\Roaming\Subversion"
+
+$Source = "C:\Program Files\Subversion\"
+#Get-ChildItem $source
+$Destination = 'C:\Users\*\AppData\Roaming'
+Get-ChildItem $Destination | ForEach-Object {Copy-Item -Path $Source -Destination $Destination -Force -Recurse}   
+
+
 
 svn --version
