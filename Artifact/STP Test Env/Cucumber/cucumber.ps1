@@ -3,7 +3,7 @@
 [System.Environment]::SetEnvironmentVariable("PATH", $Env:Path + ";C:\Ruby23-x64\bin\;C:\RubyDevKit;C:\Ansicon\x64", "Machine") 
 $env:Path += ";C:\Ruby23-x64\bin\;C:\Ansicon\x64" 
 
-unction Create-Folder {
+function Create-Folder {
     Param ([string]$path)
     if ((Test-Path $path) -eq $false) 
     {
