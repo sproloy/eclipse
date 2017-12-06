@@ -60,7 +60,7 @@ if((Test-Path "C:\RubyDevKit\DevKit-mingw64-64-4.7.2-20130224-1432-sfx.exe") -eq
 {
   
         Download-File "https://mylibrary123.blob.core.windows.net/reposit/DevKit-mingw64-64-4.7.2-20130224-1432-sfx.exe" "C:\RubyDevKit\DevKit-mingw64-64-4.7.2-20130224-1432-sfx.exe"  
-        Start-Process $workdirdev\DevKit-mingw64-64-4.7.2-20130224-1432-sfx.exe -ArgumentList "-oC:\RubyDevKit -y" -PassThru -Wait
+        Start-Process C:\RubyDevKit\DevKit-mingw64-64-4.7.2-20130224-1432-sfx.exe -ArgumentList "-oC:\RubyDevKit -y" -PassThru -Wait
         cd C:\RubyDevKit
         ruby dk.rb init
         Add-Content -Path "C:\RubyDevKit\config.yml" -Value '- C:\Ruby23-x64' -PassThru
