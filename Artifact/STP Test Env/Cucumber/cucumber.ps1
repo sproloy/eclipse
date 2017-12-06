@@ -129,4 +129,4 @@ cd C:\Ansicon\x64
 ansicon.exe -i
 
 # Remove the installer
-rm -Force $workdir\rubyinstaller-2.3.3-x64.exe
+#rm -Force $workdir\rubyinstaller-2.3.3-x64.exe
