@@ -40,7 +40,7 @@ if((Test-Path "C:\installer\rubyinstaller-2.3.3-x64.exe") -eq $false)
 }
 
 # Wait XX Seconds for the installation to finish
-Start-Sleep -s 40
+Start-Sleep -s 50
 
 
 #Get-ChildItem $Destinationruby | ForEach-Object {Copy-Item -Path $Sourceruby -Destination $_ -Force -Recurse}
