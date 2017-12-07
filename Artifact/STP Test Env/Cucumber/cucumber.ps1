@@ -4,6 +4,28 @@
 $env:Path += ";C:\Ruby23-x64\bin\"
 $env:Path += ";C:\Ansicon\x64" 
 
+function Create-Folder {
+    Param ([string]$path)
+    if ((Test-Path $path) -eq $false) 
+    {
+        Write-Host "$path doesn't exist. Creating now.."
+        New-Item -ItemType "directory" -Path $path
+    }
+}
+
+function Download-File{
+    Param ([string]$src, [string] $dst)
+
+    (New-Object System.Net.WebClient).DownloadFile($src,$dst)
+    #Invoke-WebRequest $src -OutFile $dst
+}
+
+function WaitForFile($File) {
+  while(!(Test-Path $File)) {    
+    Start-Sleep -s 10;   
+  }  
+} 
+
 # Silent SASS using RubyInstaller
 $workdir = "C:\installer\"
 # Check if work directory exists if not create it
