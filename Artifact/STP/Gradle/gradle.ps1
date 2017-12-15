@@ -66,7 +66,7 @@ function InstallPackages
     {
         $package = $package.Trim()
         WriteLog "Installing package: $package ..."
-        choco install $package --force --yes --acceptlicense --verbose --allow-empty-checksums | Out-Null  
+        choco install $package --version 4.3.0 --force --yes --acceptlicense --verbose --allow-empty-checksums | Out-Null  
         if (-not $?)
         {
             $errMsg = 'Installation failed. Please see the chocolatey logs in %ALLUSERSPROFILE%\chocolatey\logs folder for details.'
